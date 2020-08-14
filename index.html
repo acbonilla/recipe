@@ -1,1 +1,57 @@
-hello world
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <h1>WHAT'S COOKING</h1>
+    <h2> Food, Fun and Friends </h2>
+
+    <section>
+        <p> Welcome to "What's Cooking" the place where friends, old and new, share recipes, tips, and fun. Join us
+            every Thursday @ 5 pm est. with ZOOM @ Zoom with you, for our virtual cooking party where we all try a new
+            recipe together.
+        </p>
+    </section>
+    <label for="RecipeSelect">Category</label>
+    <!--<label for="Search Recipes">Search Recipes</label>
+    -->
+    <select id="RecipeSelect" name="recipes" onchange="selectRecipe()">
+    </select>
+
+    <!-- isEditing === false -->
+    <div id="myList"></div>
+
+    <!-- isEditing === true -->
+    <form>
+        <h1> Share Your Recipes</h1>
+        <fieldset>
+            <legend>Recipe Info </legend>
+            <div class='field'>
+                <label for="Recipe Name">Recipe Name</label>
+                <input id="Recipe Name">
+            </div>
+            <div class="field">
+                <label for="Ingredients">Ingredients</label>
+                <textarea id="Ingredients" rows="6"></textarea>
+                <div class="field">
+                    <label for="Steps">Steps</label>
+                    <textarea id="Steps" rows="6"></textarea>
+                    <div>
+                        <label for="Prep Time">Prep.Time</label>
+                        <input id="Prep Time" type="text" />
+                    </div>
+                    <div>
+                        <button id="Enter" onclick="onAdd(event)">Add</button>
+                        <button id="reset" onclick="onReset()">Reset</button>
+                        <button id="execute" onclick="onEdit()">Edit</button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</body>
+<script src="index.js"></script>
+
+</html>
